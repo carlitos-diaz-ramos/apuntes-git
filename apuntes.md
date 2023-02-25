@@ -1,4 +1,13 @@
-## Apuntes de `git` e `git-hub`
+# Apuntes de `git` e `git-hub`
+
+## Empregar `git` localmente
+
+Se non está feito xa, hai que establece-la información da conta
+
+```
+git config --global user.name "carlitos-diaz-ramos"
+git config --global user.email "carlitos.diaz.ramos@gmail.com"
+```
 
 Supoñamos que temos unha carpeta `apuntes-git` con código e queremos empregar `git`.
 
@@ -27,3 +36,19 @@ Para crear un punto no que se salva o proxeto empregamos
 ```
 git commit -m "Acompañamento inicial"
 ```
+
+Cada vez que se fagan cambios hai que empregar `git add *` e cando se queira acompañar `git commit`.
+
+Tamén convén crear un arquivo `.gitignore` especificando que arquivos non se van a controlar cada vez que se fai `git add *`.
+
+
+## Subir código a un repositorio de `git-hub`
+
+A continuación, na conta de `git-hub` creamos un repositorio novo (poñamos `apuntes-git`).  Deixa-lo repositorio completamente branco para evitar problemas.
+
+Vinculámo-lo repositorio creado co local
+
+```
+git remote add origin https://github.com/carlitos-diaz-ramos/apuntes-git.git
+```
+

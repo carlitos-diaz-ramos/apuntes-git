@@ -74,3 +74,9 @@ git push origin main
 despois de cada `git commit`.
 
 
+## Referencias
+
+- [Pro Git book](https://git-scm.com/book/en/v2).
+- [Documentación de Git-hub](https://docs.github.com/en).
+- [Vídeo introductorio](https://www.youtube.com/watch?v=RGOj5yH7evk).
+- [Tutorial de Real Python](https://realpython.com/python-git-github-intro/).

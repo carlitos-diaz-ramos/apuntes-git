@@ -52,3 +52,25 @@ Vinculámo-lo repositorio creado co local
 git remote add origin https://github.com/carlitos-diaz-ramos/apuntes-git.git
 ```
 
+Podemos ver que todo está ben con 
+```
+git remote -v
+```
+
+Para subi-lo ficheiros utilizamos
+
+```
+git push -u origin main
+```
+
+Se refrescámo-la páxina de `git-hub` agora, xa deberían aparece-los arquivos locais tal e como estaban xusto despois do último `git commit`.
+
+Cada vez que se queira sincronizar simplemente executamos 
+
+```
+git push origin main
+```
+
+despois de cada `git commit`.
+
+

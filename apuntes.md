@@ -3,7 +3,6 @@
 ## Empregar `git` localmente
 
 Se non está feito xa, hai que establece-la información da conta
-
 ```
 git config --global user.name "carlitos-diaz-ramos"
 git config --global user.email "carlitos.diaz.ramos@gmail.com"
@@ -12,7 +11,6 @@ git config --global user.email "carlitos.diaz.ramos@gmail.com"
 Supoñamos que temos unha carpeta `apuntes-git` con código e queremos empregar `git`.
 
 En primeiro lugar iniciamos git:
-
 ```
 git init -b main
 ```
@@ -20,19 +18,16 @@ git init -b main
 Actualmente `git-hub` emprega `main` en vez de `master` como rama principal, así que cambiámo-lo nome para non ter problemas ó subir.
 
 Podemos ve-lo estado da sincronización con
-
 ```
 git status
 ```
 
 Engadímolos tódolos ficheiros que queremos ter no sistema
-
 ```
 git add *
 ```
 
 Para crear un punto no que se salva o proxeto empregamos
-
 ```
 git commit -m "Acompañamento inicial"
 ```
@@ -47,7 +42,6 @@ Tamén convén crear un arquivo `.gitignore` especificando que arquivos non se v
 A continuación, na conta de `git-hub` creamos un repositorio novo (poñamos `apuntes-git`).  Deixa-lo repositorio completamente branco para evitar problemas.
 
 Vinculámo-lo repositorio creado co local
-
 ```
 git remote add origin https://github.com/carlitos-diaz-ramos/apuntes-git.git
 ```
@@ -58,7 +52,6 @@ git remote -v
 ```
 
 Para subi-lo ficheiros utilizamos
-
 ```
 git push -u origin main
 ```
@@ -66,12 +59,40 @@ git push -u origin main
 Se refrescámo-la páxina de `git-hub` agora, xa deberían aparece-los arquivos locais tal e como estaban xusto despois do último `git commit`.
 
 Cada vez que se queira sincronizar simplemente executamos 
-
 ```
 git push origin main
 ```
 
 despois de cada `git commit`.
+
+
+## Crear unha bifurcación
+
+O obxectivo de crear unha bifurcación é deixar activa a póla principal `main` mentres traballamos nalgo que é provisional ou que non estamos seguros de se vai saír.  Se máis adiante o novo traballo cremos que pode formar parte da versión principal, simplemente refundimos con `main`.
+
+Para crear unha bifuración `testing` empregamos
+```
+git branch testing
+```
+
+e agora tecleamos
+```
+git checkout testing
+```
+
+para traballar nela (o que supón move-lo punteiro `HEAD` a esta nova bifurcación).
+
+Neste momento empregamos os comandos habituais de `git` para ir actualizando esta bifurcación.  Cando consideremos que xa está rematado o noso traballo e queremos volver a `main`, temos que refundi-las dúas pólas.  En primeiro lugar volvemos a `main`.
+```
+git checkout main
+```
+
+Agora refundimos coa póla creada anteriormente:
+```
+git merge testing
+```
+
+Nótese que en ocasións refundir dúas pólas non vai ser tan sinxelo se traballamos simultaneamente nas dúas.  Neses casos haberá conflictos e haberá que resolvelos dalgún xeito.
 
 
 ## Referencias

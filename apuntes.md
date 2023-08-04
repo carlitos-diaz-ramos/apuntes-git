@@ -4,8 +4,8 @@
 
 Se non está feito xa, hai que establece-la información da conta
 ```
-git config --global user.name "carlitos-diaz-ramos"
-git config --global user.email "carlitos.diaz.ramos@gmail.com"
+git config --global user.name "my-name"
+git config --global user.email "my-name@gmail.com"
 ```
 
 Supoñamos que temos unha carpeta `apuntes-git` con código e queremos empregar `git`.
@@ -29,7 +29,7 @@ git add *
 
 Para crear un punto no que se salva o proxeto empregamos
 ```
-git commit -m "Acompañamento inicial"
+git commit -m "First commit"
 ```
 
 Cada vez que se fagan cambios hai que empregar `git add *` e cando se queira acompañar `git commit`.
@@ -43,7 +43,7 @@ A continuación, na conta de `git-hub` creamos un repositorio novo (poñamos `ap
 
 Vinculámo-lo repositorio creado co local
 ```
-git remote add origin https://github.com/carlitos-diaz-ramos/apuntes-git.git
+git remote add origin https://github.com/blah/apuntes-git.git
 ```
 
 Podemos ver que todo está ben con 
@@ -51,7 +51,7 @@ Podemos ver que todo está ben con
 git remote -v
 ```
 
-Para subi-lo ficheiros utilizamos
+Para subi-los ficheiros utilizamos
 ```
 git push -u origin main
 ```
@@ -101,3 +101,4 @@ Nótese que en ocasións refundir dúas pólas non vai ser tan sinxelo se trabal
 - [Documentación de Git-hub](https://docs.github.com/en).
 - [Vídeo introductorio](https://www.youtube.com/watch?v=RGOj5yH7evk).
 - [Tutorial de Real Python](https://realpython.com/python-git-github-intro/).
+- [Git en VSCode](https://code.visualstudio.com/docs/sourcecontrol/overview).
